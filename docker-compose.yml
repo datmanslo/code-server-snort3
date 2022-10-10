@@ -1,0 +1,32 @@
+version: "3"
+services:
+  dev:
+    image: datmanslo/code-server-snort3:${TAG}
+    build:
+      context: .
+      args:
+        - BASE=${BASE}
+        - TAG=${TAG}
+        - CODE_VERSION=${CODE_VERSION}
+        - ARCH=${ARCH}
+        - RELEASE_URL=${RELEASE_URL}
+        - USERNAME=${USERNAME}
+        - UID=${UID}
+        - GID=${GID}
+      dockerfile: Dockerfile
+    init: true
+    environment:
+      - SNORT_GIT=${SNORT_GIT}
+      - CODE_IP=${CODE_IP}
+      - CODE_PORT=${CODE_PORT}
+    volumes:
+      - dockerInDocker:/var/lib/docker
+      - homeFolder:/home/${USERNAME}
+    command: [ "/usr/local/bin/commands.sh" ]
+    privileged: true
+    ports:
+      - 18080:8080
+    user: ${USERNAME}
+volumes:
+  dockerInDocker:
+  homeFolder:
