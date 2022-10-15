@@ -1,6 +1,6 @@
 # code-server-snort3
 
-This repository contains a sample [code-server](https://coder.com/docs/code-server/latest) development environment for [Snort3](https://www.github.com/snort3). The envionemnt also has the Docker Daemon (Docker in Docker) available.
+This repository contains a sample [code-server](https://coder.com/docs/code-server/latest) development environment for [Snort3](https://www.github.com/snort3). The environment also has the Docker Daemon (Docker in Docker) available.
 
 Feel free to customize as needed, additions, installed APT packages, cloned repositories, etc for your own needs.
 
