@@ -10,7 +10,7 @@ Feel free to customize as needed, additions, installed APT packages, cloned repo
 
 ## Usage:
 
-Clone the repository and star the Docker Compose service
+Clone the repository and start the Docker Compose service
 
 ```
 git clone https://github.com/datmanslo/code-server-snort3.git
